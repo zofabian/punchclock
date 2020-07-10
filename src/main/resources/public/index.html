@@ -10,21 +10,25 @@
         <script src="script.js" type="application/javascript"></script>
     </head>
     <body>
-        <form id="createEntryForm">
-            <label for="checkIn">Check in</label>
+        <form id="entryForm">
+            <label for="checkIn">Produkt?</label>
+            <input type="text" name="product" id="product" required>
+            <label for="checkIn">Wann ist das Produkt angekommen?</label>
             <input type="date" name="checkInDate" id="checkIn" required>
             <input type="time" name="checkInTime" required>
-            <label for="checkOut">Check out</label>
+            <label for="checkOut">Wann wurde das Produkt wieder weggeschickt?</label>
             <input type="date" name="checkOutDate" id="checkOut" required>
             <input type="time" name="checkOutTime" required>
             <input type="submit" value="Save" />
+            <input type="reset" value="Cancel" />
         </form>
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Check in</th>
-                    <th>Check out</th>
+                    <th>Produkt</th>
+                    <th>Angekommen am</th>
+                    <th>Weggeschickt am</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody id="entryDisplay">
