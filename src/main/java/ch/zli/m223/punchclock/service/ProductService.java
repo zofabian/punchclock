@@ -1,7 +1,7 @@
 package ch.zli.m223.punchclock.service;
 
 import ch.zli.m223.punchclock.domain.Product;
-import ch.zli.m223.punchclock.repository.productRepository;
+import ch.zli.m223.punchclock.repository.ProductRepository;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public Product createProduct(Entry entry) {
-        return productRepository.saveAndFlush(entry);
+    public Product createProduct(Product product) {
+        return productRepository.saveAndFlush(product);
     }
 
     public List<Product> findAll() {
@@ -22,7 +22,7 @@ public class ProductService {
 
     public void deleteProduct(long id){productRepository.deleteById(id);}
 
-    public void  updateProduct(Entry entry) {
-        productRepository.save(entry);
+    public void  updateProduct(Product product) {
+        productRepository.save(product);
     }
 }
