@@ -1,7 +1,9 @@
 package ch.zli.m223.punchclock.controller;
 
 import ch.zli.m223.punchclock.domain.Entry;
+import ch.zli.m223.punchclock.domain.Product;
 import ch.zli.m223.punchclock.service.EntryService;
+import ch.zli.m223.punchclock.service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,27 +13,27 @@ import java.util.List;
 public class ProductController {
     private ProductService productService;
 
-    public EntryController(EntryService entryService) {
-        this.entryService = entryService;
+    public ProductController(ProductService productService) {
+        this.productService = productService;
     }
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Entry> getAllEntries() {
-        return entryService.findAll();
+    public List<Product> getAllEntries() {
+        return productService.findAll();
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Entry createEntry(@Valid @RequestBody Entry entry) {
-        return entryService.createEntry(entry);
+    public Entry createProduct(@Valid @RequestBody Product product) {
+        return productService.createProduct(product);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteEntry(@PathVariable long id) {entryService.deleteEntry(id);}
+    public void deleteProduct(@PathVariable long id) {productService.deleteProduct(id);}
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.CREATED)
-    public void updateEntry(@Valid @RequestBody Entry entry) {entryService.updateEntry(entry);}
+    public void updateEntry(@Valid @RequestBody Product product) {productService.updateProduct(product);}
 }
