@@ -1,12 +1,9 @@
 # M223: Punchclock
-Dies ist eine Beispielapplikation für das Modul M223.
+Das ist eine App zum managen von Produkten.
 
-## Loslegen
-Folgende Schritte befolgen um loszulegen:
-1. Sicherstellen, dass JDK 12 installiert und in der Umgebungsvariable `path` definiert ist.
-1. Ins Verzeichnis der Applikation wechseln und über die Kommandozeile mit `./gradlew bootRun` oder `./gradlew.bat bootRun` starten
-1. Unittest mit `./gradlew test` oder `./gradlew.bat test` ausführen.
-1. Ein ausführbares JAR kann mit `./gradlew bootJar` oder `./gradlew.bat bootJar` erstellt werden.
+## Beschreibung
+Mit dieser App kann man Produkte erfassen mit ihrem Lieferdatum und wann sie wieder losgeschickt wurden. Die App dient dazu eine Übersicht über alle Lieferungen zu machen.
+Beispielsweise für Firmen die hauptsächlich Produkte einkauft, um sie wieder zu verkaufen. Man kann dann eintragen wann das Produkt eingetroffen ist und wann es verkauft wurde.
 
 Folgende Dienste stehen während der Ausführung im Profil `dev` zur Verfügung:
 - REST-Schnittstelle der Applikation: http://localhost:8081
