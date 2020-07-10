@@ -13,6 +13,7 @@ public class ApplicationUser {
     private String username;
     private String password;
 
+    //Set and Get Methods
     public long getId() {
         return id;
     }
